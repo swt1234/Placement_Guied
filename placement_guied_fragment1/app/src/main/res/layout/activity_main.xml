@@ -108,6 +108,7 @@
                 android:textSize="20dp"
                 android:textColor="#F8FDF8"
                 android:layout_weight="1"
+                android:onClick="pre"
                 android:background="@drawable/prev_background"
                 android:layout_margin="20dp"
                 android:id="@+id/previous"

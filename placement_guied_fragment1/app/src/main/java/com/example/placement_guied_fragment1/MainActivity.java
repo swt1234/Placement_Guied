@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,8 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void next(View view)
     {
-        Intent in=new Intent(this,companies.class);
-        startActivity(in);
+      //  Intent in=new Intent(this,companies.class);
+        //startActivity(in);
+        TextView t1=findViewById(R.id.Question);
+        String s1=t1.getText().toString();
+        MyDb1 m=new MyDb1();
+        m.execute(s1);
+
     }
 
     public void check(View view) {
@@ -37,5 +43,12 @@ public class MainActivity extends AppCompatActivity {
         String s1=t1.getText().toString();
         MyDb2 m=new MyDb2();
         m.execute(s1,s);
+    }
+
+    public void pre(View view) {
+        TextView t1=findViewById(R.id.Question);
+        String s1=t1.getText().toString();
+        MyDb0 m=new MyDb0();
+        m.execute(s1);
     }
 }
